@@ -36,14 +36,21 @@
 
 .card__wrapper {
     padding: 1rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .card__individual__wrapper {
-    width: 25%;
+    width: 23%;
 }
 
 .card__img {
     width: 100%;
+    max-height: 200px;
+    object-fit: cover;
 }
 
 .card--btm__wrapper {
