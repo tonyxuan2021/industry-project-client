@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../../component/Navbar/Navbar";
 import magnifier from "../../assets/akar-icons_search.png";
-import avatar_2 from "../../assets/Ellipse 2.png";
 import heart from "../../assets/bi_suit-heart.png";
 import eye from "../../assets/Group.png";
 import "./InspirationsPage.scss";
