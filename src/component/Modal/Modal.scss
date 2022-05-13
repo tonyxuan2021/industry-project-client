@@ -38,15 +38,25 @@ body.active-modal {
 .close-modal {
     position: absolute;
     bottom: 10px;
-    right: 80px;
+    right: 120px;
     padding: 5px 7px;
+    background-color: #E7E8E9;
+    border: none;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 4px;
 }
 
 .submit-modal {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 28px;
     padding: 5px 7px;
+    background-color: #AE3C32;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
 }
 
 .name__wrapper {
@@ -61,18 +71,25 @@ body.active-modal {
 }
 
 .modal__inner__wrapper {
-    margin-top: 30px;
+    // margin-top: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 10px;
     border: 1px solid #B1B2B2;
-    padding: 70px 0;
+    padding: 40px 0;
 }
 
 .modal__img {
     max-width: 100px;
-    margin-left: 460px;
+    // margin: 0;
+    // margin: auto;
+    // margin-left: 460px;
+}
+
+.modal__img--2 {
+    margin-left: 40%;
+    margin-right: 1rem;
 }
 
 .margin__fix {

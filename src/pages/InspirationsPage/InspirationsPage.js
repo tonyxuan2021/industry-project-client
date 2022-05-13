@@ -19,6 +19,19 @@ class InspirationsPage extends Component {
     });
   }
 
+  handleSubmitPhoto = () => {
+    axios.post("http://localhost:8080/inspiration/").then((response) => {
+      axios.get(`http://localhost:8080/inspiration/`).then((response) => {
+        const imageResults = response.data;
+        console.log(imageResults);
+        this.setState({ images: imageResults });
+      });
+      // this.setState({
+
+      //  });
+    });
+  };
+
   render() {
     if (this.state.images.length === 0) {
       return (
@@ -30,7 +43,7 @@ class InspirationsPage extends Component {
 
     return (
       <div className="insp__wrapper">
-        <Navbar />
+        <Navbar handleSubmitPhoto={this.handleSubmitPhoto} />
         <div className="inspiration__wrapper">
           <p className="inspiration__text font-black">Popular</p>
           <div className="tag__wrapper">
