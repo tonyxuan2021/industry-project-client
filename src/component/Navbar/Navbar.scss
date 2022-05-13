@@ -1,0 +1,42 @@
+.logo {
+    width: 15%;
+}
+
+.nav__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    max-height: 35px;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid #e7e8e9;
+}
+
+.link__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav__img {
+    width: 2.5%;
+}
+
+.radius {
+    border-radius: 15px;
+    border: 1px solid #e7e8e9;
+    padding: 7px 10px;
+}
+
+.background {
+    background-color: #dddedf;
+}
+
+.downArrow {
+    width: 14px;
+}
+
+.border {
+    border-right: 1px solid #737373;
+    padding-right: 0.8rem;
+}
