@@ -38,7 +38,7 @@ const Navbar = () => {
       </div>
       <p>ENTERPRISE</p>
       <p className="radius">Get $50</p>
-      <p className="radius background">Submit a photo</p>
+      <p className="radius background">Share Your Work</p>
       <div className="link__wrapper">
         <p>Pricing</p>
         <img src={downArrow} className="downArrow"></img>
