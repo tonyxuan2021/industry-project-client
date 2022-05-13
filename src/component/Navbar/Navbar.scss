@@ -1,5 +1,5 @@
 .logo {
-    width: 15%;
+    width: 130px;
 }
 
 .nav__wrapper {
@@ -16,6 +16,8 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
+    color: black;
 }
 
 .nav__img {

@@ -1,0 +1,92 @@
+
+.tag__wrapper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid #e7e8e9;
+    padding: 3px 10px;
+}
+
+.inspiration__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 3rem 1rem 3rem;
+}
+
+.inspiration__text {
+    color: #737373;
+    margin: 0;
+}
+
+.mag {
+    width: 20%;
+    object-fit: cover;
+    color: #737373;
+}
+
+.font-black {
+    color: #000000;
+}
+
+.insp__title {
+    text-align: center;
+}
+
+.card__wrapper {
+    padding: 1rem 3rem;
+}
+
+.card__individual__wrapper {
+    width: 25%;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card--btm__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card--left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card--right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.heart__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.eye__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.img--btn__3 {
+    width: 35%;
+    object-fit: cover;
+}
+
+.img--btn__2 {
+    width: 30%;
+    object-fit: cover;
+}
+
+.img--btn__1 {
+    width: 20%;
+    object-fit: cover;
+}
