@@ -1,14 +1,34 @@
 import React, { Component } from "react";
 import Navbar from "../../component/Navbar/Navbar";
 import magnifier from "../../assets/akar-icons_search.png";
-import img_1 from "../../assets/Rectangle 60.png";
 import avatar_2 from "../../assets/Ellipse 2.png";
 import heart from "../../assets/bi_suit-heart.png";
 import eye from "../../assets/Group.png";
 import "./InspirationsPage.scss";
+import axios from "axios";
 
 class InspirationsPage extends Component {
+  state = {
+    images: [],
+  };
+
+  componentDidMount() {
+    axios.get(`http://localhost:8080/inspiration/`).then((response) => {
+      const imageResults = response.data;
+      console.log(imageResults);
+      this.setState({ images: imageResults });
+    });
+  }
+
   render() {
+    if (this.state.images.length === 0) {
+      return (
+        <section>
+          <p>... Loading your post data ...</p>
+        </section>
+      );
+    }
+
     return (
       <div className="insp__wrapper">
         <Navbar />
@@ -29,25 +49,29 @@ class InspirationsPage extends Component {
         </div>
         <h1 className="insp__title">Check out some of today's inspiration</h1>
         <div className="card__wrapper">
-          <div className="card__individual__wrapper">
-            <img src={img_1} className="card__img"></img>
-            <div className="card--btm__wrapper">
-              <div className="card--left">
-                <img src={avatar_2} className="img--btn__1"></img>
-                <p>Jacob Foster</p>
-              </div>
-              <div className="card--right">
-                <div className="heart__wrapper">
-                  <img src={heart} className="img--btn__2"></img>
-                  <p>0</p>
+          {this.state.images.map((image) => {
+            return (
+              <div className="card__individual__wrapper" key={image.id}>
+                <img src={image.image} className="card__img"></img>
+                <div className="card--btm__wrapper">
+                  <div className="card--left">
+                    <img src={image.avatar} className="img--btn__1"></img>
+                    <p>{image.name}</p>
+                  </div>
+                  <div className="card--right">
+                    <div className="heart__wrapper">
+                      <img src={heart} className="img--btn__2"></img>
+                      <p>{image.likes}</p>
+                    </div>
+                    <div className="eye__wrapper">
+                      <img src={eye} className="img--btn__3"></img>
+                      <p>{image.views}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="eye__wrapper">
-                  <img src={eye} className="img--btn__3"></img>
-                  <p>0</p>
-                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     );
